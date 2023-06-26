@@ -5,17 +5,32 @@ function generatePassword() {
   while (passwordLength < 8 || passwordLength > 128) {
     passwordLength = parseInt(prompt("It appears your password length was either less than 8 or more than 128. Please input a valid length."));
   }
-  function characterPrompts() {
-    var includesLowercase = confirm("Do you want to include lowercase characters in your password?");
-    var includesUppercase = confirm("Do you want to include uppercase characters in your password?");
-    var includesNumeric = confirm("Do you want to include numeric characters in your password?");
-    var includesSpecial = confirm("Do you want to include special characters (ie. @, #, $, %, etc.) in your password?");
-    if ([includesLowercase, includesUppercase, includesNumeric, includesSpecial].every(element => element === false)) {
-      alert("It looks like you didn't select any character types. Please choose at least one.");
-      characterPrompts();
-    }
+  var includesLowercase = confirm("Do you want to include lowercase characters in your password?");
+  var includesUppercase = confirm("Do you want to include uppercase characters in your password?");
+  var includesNumeric = confirm("Do you want to include numeric characters in your password?");
+  var includesSpecial = confirm("Do you want to include special characters (ie. @, #, $, %, etc.) in your password?");
+  while ([includesLowercase, includesUppercase, includesNumeric, includesSpecial].every(element => element === false)) {
+    alert("It looks like you didn't select any character types. Please choose at least one.");
+    includesLowercase = confirm("Do you want to include lowercase characters in your password?");
+    includesUppercase = confirm("Do you want to include uppercase characters in your password?");
+    includesNumeric = confirm("Do you want to include numeric characters in your password?");
+    includesSpecial = confirm("Do you want to include special characters (ie. @, #, $, %, etc.) in your password?");
   }
-  characterPrompts();
+  var identifiers = [];
+  if (includesLowercase) {
+    identifiers.push(1);
+  } 
+  if (includesUppercase) {
+    identifiers.push(2);
+  }
+  if (includesNumeric) {
+    identifiers.push(3);
+  }
+  if (includesSpecial) {
+    identifiers.push(4);
+  }
+  console.log(identifiers);
+  var passwordCharacters = [];
 }
 
 
