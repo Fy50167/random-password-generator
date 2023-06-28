@@ -8,4 +8,4 @@ https://fy50167.github.io/random-password-generator/
 
 # Deployed Application Screenshot
 
-![App screenshot](App Screenshot.jpeg)
+![App screenshot](App_Screenshot.jpeg)
