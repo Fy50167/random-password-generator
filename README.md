@@ -4,6 +4,8 @@ This code takes user input through prompts and generates a corresponding randomi
 
 # Deployed Application Link
 
-
+https://fy50167.github.io/random-password-generator/
 
 # Deployed Application Screenshot
+
+![alt text]('App Screenshot.jpeg')
